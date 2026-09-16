@@ -1,0 +1,10 @@
+name = "garden-maniac-api"
+type = "javascript"
+main = "src/index.js"
+compatibility_date = "2024-09-16"
+
+[env.production]
+name = "garden-maniac-api"
+routes = [
+  { pattern = "api.gardenmaniac.com/*", zone_name = "gardenmaniac.com" }
+]
