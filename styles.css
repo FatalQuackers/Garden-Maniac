@@ -1,5 +1,5 @@
 /* ==========================================
-   GROW A RANDOM PLANT - MODERN GLASS UI
+   GARDEN MANIAC - CAVE FORGE THEME
    ========================================== */
 
 * {
@@ -16,9 +16,9 @@ body {
     transition: background 0.3s ease, color 0.3s ease;
 }
 
-body.theme-dark-energized {
-    background: #060911;
-    color: #f1f5f9;
+body.theme-cave-forge {
+    background: radial-gradient(ellipse at 10% 10%, #0b0a0a 0%, #060504 40%, #0e0e0e 100%);
+    color: #f3e8d6; /* warm stone text */
 }
 
 body.theme-light-energized {
@@ -26,7 +26,7 @@ body.theme-light-energized {
     color: #0f172a;
 }
 
-/* Background Glowing Orbs */
+/* Background Glowing Orbs (lava/embers) */
 .animated-bg-overlay {
     position: fixed;
     top: 0;
@@ -46,9 +46,9 @@ body.theme-light-energized {
     animation: orbFloat 20s ease-in-out infinite alternate;
 }
 
-.orb-1 { top: -15%; left: 10%; width: 500px; height: 500px; background: #00ff88; }
-.orb-2 { bottom: -15%; right: 10%; width: 600px; height: 600px; background: #0088ff; animation-delay: -6s; }
-.orb-3 { top: 35%; left: 45%; width: 400px; height: 400px; background: #9d4edd; animation-delay: -12s; }
+.orb-1 { top: -10%; left: 10%; width: 520px; height: 520px; background: #ff6a00; }
+.orb-2 { bottom: -15%; right: 10%; width: 620px; height: 620px; background: #ffb86b; animation-delay: -6s; }
+.orb-3 { top: 35%; left: 45%; width: 420px; height: 420px; background: #4b3621; animation-delay: -12s; }
 
 @keyframes orbFloat {
     0% { transform: translate(0, 0) scale(1); }
@@ -57,8 +57,8 @@ body.theme-light-energized {
 
 .particle {
     position: absolute;
-    font-size: 1.5rem;
-    opacity: 0.2;
+    font-size: 1.6rem;
+    opacity: 0.25;
     animation: particleFloat 15s linear infinite;
 }
 
@@ -78,10 +78,10 @@ body.theme-light-energized {
     position: sticky;
     top: 0;
     width: 100%;
-    background: rgba(10, 15, 26, 0.7);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(6, 5, 4, 0.8);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba(255, 180, 120, 0.06);
     z-index: 1000;
     padding: 14px 28px;
 }
@@ -109,10 +109,10 @@ body.theme-light-energized .navbar {
     display: flex;
     align-items: center;
     gap: 10px;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 140, 60, 0.04);
     padding: 6px 16px;
     border-radius: 30px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 140, 60, 0.06);
     cursor: pointer;
     transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -123,10 +123,10 @@ body.theme-light-energized .profile-badge {
 }
 
 .profile-badge:hover {
-    background: rgba(0, 255, 136, 0.15);
-    border-color: #00ff88;
+    background: rgba(255, 110, 40, 0.12);
+    border-color: #ff8a3d;
     transform: translateY(-2px);
-    box-shadow: 0 4px 20px rgba(0, 255, 136, 0.2);
+    box-shadow: 0 4px 20px rgba(255, 110, 40, 0.12);
 }
 
 .profile-avatar {
@@ -153,8 +153,8 @@ body.theme-light-energized .profile-badge {
 }
 
 .nav-btn {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 140, 60, 0.08);
     color: inherit;
     padding: 9px 16px;
     border-radius: 12px;
@@ -173,7 +173,7 @@ body.theme-light-energized .nav-btn {
 }
 
 .nav-btn:hover {
-    background: rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.06);
     transform: translateY(-2px);
 }
 
@@ -183,9 +183,9 @@ body.theme-light-energized .nav-btn {
 }
 
 .menu-trigger {
-    background: rgba(0, 255, 136, 0.15);
-    border-color: rgba(0, 255, 136, 0.3);
-    color: #00ff88;
+    background: rgba(255, 110, 40, 0.12);
+    border-color: rgba(255, 110, 40, 0.25);
+    color: #ffb86b;
 }
 
 /* Glass Menu Drawer */
@@ -195,10 +195,10 @@ body.theme-light-energized .nav-btn {
     right: 0;
     width: 320px;
     height: 100vh;
-    background: rgba(10, 15, 26, 0.88);
-    backdrop-filter: blur(28px) saturate(190%);
-    -webkit-backdrop-filter: blur(28px) saturate(190%);
-    border-left: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(10, 8, 6, 0.94);
+    backdrop-filter: blur(26px) saturate(150%);
+    -webkit-backdrop-filter: blur(26px) saturate(150%);
+    border-left: 1px solid rgba(255, 140, 60, 0.08);
     box-shadow: -20px 0 50px rgba(0, 0, 0, 0.6);
     z-index: 15000;
     transform: translateX(100%);
@@ -226,7 +226,7 @@ body.theme-light-energized .menu-drawer {
     align-items: center;
     justify-content: space-between;
     padding-bottom: 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 140, 60, 0.06);
 }
 
 .drawer-brand {
@@ -237,7 +237,7 @@ body.theme-light-energized .menu-drawer {
 
 .drawer-logo-glow {
     font-size: 1.5rem;
-    filter: drop-shadow(0 0 10px rgba(0, 255, 136, 0.6));
+    filter: drop-shadow(0 0 10px rgba(255, 120, 40, 0.6));
 }
 
 .drawer-brand h2 {
@@ -248,8 +248,8 @@ body.theme-light-energized .menu-drawer {
 }
 
 .close-drawer-btn {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
     color: inherit;
     border-radius: 50%;
     width: 36px;
@@ -262,7 +262,7 @@ body.theme-light-energized .menu-drawer {
 }
 
 .close-drawer-btn:hover {
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.06);
     transform: scale(1.05);
 }
 
@@ -280,8 +280,8 @@ body.theme-light-energized .menu-drawer {
     gap: 16px;
     width: 100%;
     padding: 14px 18px;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.03);
     border-radius: 14px;
     color: inherit;
     font-size: 0.95rem;
@@ -294,31 +294,31 @@ body.theme-light-energized .menu-drawer {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #00ff88;
+    color: #ffb86b;
 }
 
 .drawer-item:hover {
-    background: rgba(0, 255, 136, 0.12);
-    border-color: rgba(0, 255, 136, 0.3);
+    background: rgba(255, 110, 40, 0.08);
+    border-color: rgba(255, 110, 40, 0.18);
     transform: translateX(-4px);
 }
 
 .drawer-item.highlight-item {
-    background: linear-gradient(135deg, rgba(0, 255, 136, 0.15), rgba(0, 136, 255, 0.15));
-    border: 1px solid rgba(0, 255, 136, 0.25);
+    background: linear-gradient(135deg, rgba(255, 110, 40, 0.08), rgba(255, 160, 60, 0.06));
+    border: 1px solid rgba(255, 140, 60, 0.12);
 }
 
 .drawer-divider {
     height: 1px;
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.04);
     margin: 8px 0;
 }
 
 .drawer-footer {
     text-align: center;
     font-size: 0.75rem;
-    opacity: 0.5;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    opacity: 0.6;
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
     padding-top: 16px;
 }
 
@@ -328,7 +328,7 @@ body.theme-light-energized .menu-drawer {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.75);
     backdrop-filter: blur(6px);
     z-index: 14000;
     opacity: 0;
@@ -365,9 +365,9 @@ body.theme-light-energized .menu-drawer {
 .gag-search-wrapper {
     display: flex;
     align-items: center;
-    background: rgba(15, 23, 42, 0.6);
+    background: rgba(12, 12, 12, 0.6);
     backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.02);
     padding: 14px 22px;
     border-radius: 18px;
     margin-bottom: 24px;
@@ -385,13 +385,13 @@ body.theme-light-energized .menu-drawer {
 }
 
 .gag-card {
-    background: rgba(15, 23, 42, 0.65);
+    background: rgba(10, 10, 10, 0.6);
     backdrop-filter: blur(24px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.03);
     border-radius: 28px;
     padding: 48px 32px;
     text-align: center;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
 }
 
 body.theme-light-energized .gag-card {
@@ -414,7 +414,7 @@ body.theme-light-energized .gag-card {
     position: absolute;
     width: 140px;
     height: 140px;
-    background: radial-gradient(circle, rgba(0, 255, 136, 0.4) 0%, rgba(0, 136, 255, 0.2) 60%, transparent 80%);
+    background: radial-gradient(circle, rgba(255,106,0,0.45) 0%, rgba(255,184,107,0.25) 60%, transparent 80%);
     filter: blur(20px);
     border-radius: 50%;
     z-index: 1;
@@ -426,7 +426,7 @@ body.theme-light-energized .gag-card {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
-    filter: drop-shadow(0 12px 24px rgba(0,0,0,0.5));
+    filter: drop-shadow(0 12px 24px rgba(0,0,0,0.6));
     transition: transform 0.3s ease;
 }
 
@@ -439,16 +439,16 @@ body.theme-light-energized .gag-card {
     font-weight: 900;
     margin-top: 10px;
     letter-spacing: 1.5px;
-    background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 100%);
+    background: linear-gradient(180deg, #f7e9d6 0%, #d2b89a 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .gag-status-text {
     display: inline-block;
-    background: rgba(0, 255, 136, 0.12);
-    color: #00ff88;
-    border: 1px solid rgba(0, 255, 136, 0.3);
+    background: rgba(255, 140, 60, 0.08);
+    color: #ffb86b;
+    border: 1px solid rgba(255, 110, 40, 0.12);
     padding: 6px 18px;
     border-radius: 20px;
     font-weight: 800;
@@ -476,23 +476,23 @@ body.theme-light-energized .gag-card {
     transition: all 0.25s ease;
 }
 
-.gag-btn-green { background: #00ff88; color: #000; }
-.gag-btn-blue { background: #0088ff; color: #fff; }
+.gag-btn-green { background: #ffb86b; color: #2b160b; }
+.gag-btn-blue { background: #6b6b6b; color: #fff; }
 .gag-btn-danger { background: #ff4757; color: #fff; }
 
 .gag-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
 }
 
 .discord-footer-box {
     margin-top: 36px;
     padding-top: 24px;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
 }
 
 .discord-link {
-    color: #94a3b8;
+    color: #c7b59a;
     text-decoration: none;
     display: inline-flex;
     align-items: center;
@@ -503,7 +503,7 @@ body.theme-light-energized .gag-card {
 }
 
 .discord-link:hover {
-    color: #5865F2;
+    color: #e08a2f;
 }
 
 /* Dashboard Sidebar & Detail */
@@ -515,8 +515,8 @@ body.theme-light-energized .gag-card {
 }
 
 .back-btn {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
     color: inherit;
     padding: 12px;
     border-radius: 50%;
@@ -557,18 +557,18 @@ body.theme-light-energized .gag-card {
 }
 
 .dashboard-sidebar, .dashboard-main {
-    background: rgba(15, 23, 42, 0.65);
+    background: rgba(12, 12, 12, 0.7);
     backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.03);
     border-radius: 20px;
     padding: 20px;
 }
 
 /* Account Management & Debug Box */
 .account-card-wrapper {
-    background: rgba(15, 23, 42, 0.65);
+    background: rgba(12, 12, 12, 0.7);
     backdrop-filter: blur(24px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.03);
     border-radius: 28px;
     padding: 36px;
 }
@@ -586,8 +586,8 @@ body.theme-light-energized .gag-card {
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    background: rgba(0, 136, 255, 0.15);
-    color: #0088ff;
+    background: rgba(80, 60, 40, 0.12);
+    color: #e08a2f;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -601,29 +601,29 @@ body.theme-light-energized .gag-card {
 .oauth-debug-panel {
     margin-top: 32px;
     text-align: left;
-    background: rgba(0, 0, 0, 0.4);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.04);
     border-radius: 16px;
     padding: 20px;
     font-size: 0.85rem;
 }
 
 .oauth-debug-panel h4 {
-    color: #00ff88;
+    color: #ffb86b;
     margin-bottom: 12px;
     font-size: 0.95rem;
 }
 
 .oauth-debug-panel p {
     margin-bottom: 6px;
-    color: #cbd5e1;
+    color: #d6c6b0;
     word-break: break-all;
 }
 
 .highlight-uri {
-    color: #00ff88;
+    color: #ffb86b;
     font-weight: bold;
-    background: rgba(0, 255, 136, 0.1);
+    background: rgba(255, 184, 107, 0.06);
     padding: 2px 6px;
     border-radius: 4px;
 }
@@ -634,9 +634,9 @@ body.theme-light-energized .gag-card {
 
 .debug-url-preview textarea {
     width: 100%;
-    background: rgba(15, 23, 42, 0.9);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: #00ff88;
+    background: rgba(10, 10, 10, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    color: #ffb86b;
     font-family: monospace;
     font-size: 0.75rem;
     padding: 10px;
@@ -656,8 +656,8 @@ body.theme-light-energized .gag-card {
 .debug-btn {
     padding: 8px 14px;
     border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    background: rgba(255, 255, 255, 0.02);
     color: #fff;
     cursor: pointer;
     font-weight: 700;
@@ -665,9 +665,9 @@ body.theme-light-energized .gag-card {
     transition: all 0.2s ease;
 }
 
-.debug-btn:hover { background: rgba(255, 255, 255, 0.18); }
-.debug-btn-accent { background: #0088ff; border: none; }
-.debug-btn-alt { background: rgba(0, 255, 136, 0.2); border-color: rgba(0, 255, 136, 0.4); color: #00ff88; }
+.debug-btn:hover { background: rgba(255, 255, 255, 0.04); }
+.debug-btn-accent { background: #6b6b6b; border: none; }
+.debug-btn-alt { background: rgba(255, 110, 40, 0.12); border-color: rgba(255, 110, 40, 0.2); color: #ffb86b; }
 
 .connected-profile-header {
     display: flex;
@@ -680,8 +680,8 @@ body.theme-light-energized .gag-card {
     width: 68px;
     height: 68px;
     border-radius: 50%;
-    background: rgba(0, 255, 136, 0.15);
-    color: #00ff88;
+    background: rgba(80, 60, 40, 0.12);
+    color: #ffb86b;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -690,7 +690,7 @@ body.theme-light-energized .gag-card {
 .edit-name-btn {
     background: transparent;
     border: none;
-    color: #0088ff;
+    color: #ffb86b;
     cursor: pointer;
     font-weight: 700;
     font-size: 0.85rem;
@@ -699,8 +699,8 @@ body.theme-light-energized .gag-card {
 
 .theme-customizer-box {
     text-align: left;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.03);
     border-radius: 16px;
     padding: 20px;
     margin: 24px 0;
@@ -716,8 +716,8 @@ body.theme-light-energized .gag-card {
     flex: 1;
     padding: 12px;
     border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    background: rgba(0, 0, 0, 0.08);
     color: #fff;
     cursor: pointer;
     display: flex;
@@ -732,9 +732,9 @@ body.theme-light-energized .gag-card {
     position: fixed;
     bottom: 24px;
     left: 24px;
-    background: rgba(15, 23, 42, 0.85);
+    background: rgba(10, 10, 10, 0.85);
     backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.03);
     padding: 10px 18px;
     border-radius: 30px;
     display: flex;
@@ -744,7 +744,7 @@ body.theme-light-energized .gag-card {
 }
 
 .music-toggle-btn {
-    background: #00ff88;
+    background: #ffb86b;
     border: none;
     width: 34px;
     height: 34px;
@@ -753,7 +753,7 @@ body.theme-light-energized .gag-card {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    color: #000;
+    color: #2b160b;
 }
 
 .music-info {
@@ -782,14 +782,14 @@ body.theme-light-energized .gag-card {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.04);
 }
 
 .logged-out-question {
     width: 16px;
     height: 16px;
-    color: #00ff88;
+    color: #ffb86b;
     stroke-width: 2.5;
 }
 
