@@ -1,29 +1,7 @@
 name = "gardenmaniac"
-type = "javascript"
-main = "src/index.js"
+main = "server.js"
 compatibility_date = "2024-09-16"
-account_id = ""  # Add your Cloudflare Account ID
 workers_dev = true
 
-# KV Namespaces for data storage
-kv_namespaces = [
-  { binding = "GARDEN_DB", id = "", preview_id = "" }
-]
-
-# Environment variables
-[env.production]
-name = "garden-maniac-api-prod"
-routes = [
-  { pattern = "api.gardenmaniac.com/*", zone_id = "" }
-]
-
-[env.production.vars]
-ENVIRONMENT = "production"
-API_URL = "https://api.gardenmaniac.com"
-
-[env.development]
-name = "garden-maniac-api-dev"
-
-[env.development.vars]
-ENVIRONMENT = "development"
-API_URL = "http://localhost:8787"
+[vars]
+ROBLOX_REDIRECT_URI = "https://fatalquackers.github.io/Garden-Maniac/"
