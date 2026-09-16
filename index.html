@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="theme-cave-forge">
-
     <!-- Ambient Glow & Particles -->
     <div class="animated-bg-overlay">
         <div class="glow-orb orb-1"></div>
@@ -53,8 +52,8 @@
             </div>
 
             <div class="nav-right">
-                <button class="nav-btn icon-only" title="Toggle Light/Dark Mode" onclick="toggleThemeMode()">
-                    <i data-lucide="sun" id="themeIcon"></i>
+                <button class="nav-btn icon-only theme-switcher" title="Change Theme" onclick="cycleTheme()">
+                    <i data-lucide="palette" id="themeIcon"></i>
                 </button>
                 <button class="nav-btn icon-only" title="Home Portal" onclick="showPage('portal-page')">
                     <i data-lucide="home"></i>
@@ -64,10 +63,6 @@
                 </button>
                 <button class="nav-btn icon-only" title="Toggle Sound FX" onclick="toggleSound()">
                     <i data-lucide="volume-2" id="soundIcon"></i>
-                </button>
-                <button class="nav-btn lang-btn" title="Language" onclick="toggleLanguage()">
-                    <i data-lucide="globe"></i>
-                    <span id="langText">US</span>
                 </button>
                 <button class="nav-btn icon-only menu-trigger" title="Menu" onclick="toggleMenuDrawer()">
                     <i data-lucide="menu"></i>
@@ -210,7 +205,7 @@
                 <div>
                     <span class="breadcrumb">Home / Account & Settings</span>
                     <h2 class="news-title">🛡️ Player Profile & Customization</h2>
-                    <p class="news-subtitle">Manage your linked Roblox profile and audio/visual settings.</p>
+                    <p class="news-subtitle">Manage your linked Roblox profile and visual themes.</p>
                 </div>
             </div>
 
@@ -221,29 +216,12 @@
                         <i data-lucide="box"></i>
                     </div>
                     <h3>No Roblox Account Connected</h3>
-                    <p>Connect your Roblox account via OAuth to sync player stats.</p>
+                    <p>Connect your Roblox account to sync player stats and progress.</p>
                     
                     <button class="gag-btn gag-btn-blue account-connect-btn" onclick="connectRobloxAccount()">
                         <i data-lucide="shield-check"></i>
                         <span>CONNECT WITH ROBLOX</span>
                     </button>
-
-                    <!-- OAuth Debug Panel -->
-                    <div id="oauthDebugBox" class="oauth-debug-panel">
-                        <h4>🔧 OAuth Diagnostics & Setup Helper</h4>
-                        <p><strong>Configured Client ID:</strong> <span id="debugClientId">4037165407323325158</span></p>
-                        <p><strong>Current Browser Origin:</strong> <span id="debugOrigin"></span></p>
-                        <p><strong>Exact URI needed on Roblox Console:</strong> <span id="debugRedirectUri" class="highlight-uri"></span></p>
-                        <div class="debug-url-preview">
-                            <strong>Full Generated Auth URL:</strong>
-                            <textarea id="debugFullUrl" readonly rows="3"></textarea>
-                        </div>
-                        <div class="debug-actions">
-                            <button class="debug-btn" onclick="copyDebugUrl()">📋 Copy Exact Redirect URI</button>
-                            <button class="debug-btn debug-btn-accent" onclick="testDirectRedirect()">🚀 Launch Auth</button>
-                            <button class="debug-btn debug-btn-alt" onclick="openRobloxModal()">💬 Fallback Mock Login</button>
-                        </div>
-                    </div>
                 </div>
 
                 <!-- Connected State -->
@@ -262,13 +240,8 @@
 
                     <div class="theme-customizer-box">
                         <h4>🎨 Choose Visual Theme</h4>
-                        <div class="theme-picker-grid">
-                            <button class="theme-option-btn theme-dark-picker" onclick="setHubTheme('theme-cave-forge')">
-                                <span class="theme-dot"></span> Cave Forge
-                            </button>
-                            <button class="theme-option-btn theme-light-picker" onclick="setHubTheme('theme-light-energized')">
-                                <span class="theme-dot"></span> Friendly Light
-                            </button>
+                        <div class="theme-picker-grid" id="themeGrid">
+                            <!-- Themes will be dynamically populated -->
                         </div>
                     </div>
 
@@ -285,6 +258,7 @@
     </main>
 
     <!-- Scripts -->
+    <script src="scripts/themes.js"></script>
     <script src="scripts/nav.js"></script>
     <script src="scripts/portal.js"></script>
     <script src="scripts/announcements.js"></script>
