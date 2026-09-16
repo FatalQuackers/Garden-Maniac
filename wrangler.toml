@@ -1,4 +1,4 @@
-name = "garden-maniac-api"
+name = "gardenmaniac"
 type = "javascript"
 main = "src/index.js"
 compatibility_date = "2024-09-16"
