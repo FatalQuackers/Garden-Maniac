@@ -1,7 +1,7 @@
 name = "gardenmaniac"
-main = "server.js"
+main = "worker.js"
 compatibility_date = "2024-09-16"
-workers_dev = true
+compatibility_flags = ["nodejs_compat"]
 
 [vars]
 ROBLOX_REDIRECT_URI = "https://fatalquackers.github.io/Garden-Maniac/"
