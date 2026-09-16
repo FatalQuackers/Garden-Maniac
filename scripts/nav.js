@@ -1,17 +1,19 @@
 /* ==========================================
-   GROW A RANDOM PLANT - NAV & CORE MODULE
+   GARDEN MANIAC - NAV & CORE MODULE
    ========================================== */
 
 // --- CONFIGURATION ---
 const ROBLOX_CLIENT_ID = '4037165407323325158';
 
-// Compute redirect URI from the actual running page so it always matches the site origin+path
+// Compute redirect URI to always match current host (local vs GitHub Pages)
 const REDIRECT_URI = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
     ? 'http://localhost:5500/'
-    : (() => {
-        let p = window.location.origin + window.location.pathname;
-        return p.endsWith('/') ? p : p + '/';
-    })();
+    : 'https://fatalquackers.github.io/Garden-Maniac/';
+
+// Backend URL: Points to local Node.js or Render
+const BACKEND_URL = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
+    ? 'http://localhost:5000'
+    : 'https://playgarp-backend.onrender.com'; // <-- REPLACE with your actual Render service URL if named differently
 
 // Live backend URL vs Local
 const BACKEND_URL = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
