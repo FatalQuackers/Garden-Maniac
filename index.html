@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catch a plant Hub</title>
+    <title>Garden Maniac Hub</title>
     
     <!-- Fonts & Lucide Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,17 +12,17 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="theme-dark-energized">
+<body class="theme-cave-forge">
 
     <!-- Ambient Glow & Particles -->
     <div class="animated-bg-overlay">
         <div class="glow-orb orb-1"></div>
         <div class="glow-orb orb-2"></div>
         <div class="glow-orb orb-3"></div>
-        <div class="particle p1">🌱</div>
-        <div class="particle p2">✨</div>
-        <div class="particle p3">🌸</div>
-        <div class="particle p4">🍃</div>
+        <div class="particle p1">🔥</div>
+        <div class="particle p2">⚒️</div>
+        <div class="particle p3">✨</div>
+        <div class="particle p4">🪨</div>
     </div>
 
     <!-- Notification Toast Container -->
@@ -34,7 +34,7 @@
             <i data-lucide="music" id="musicIcon"></i>
         </button>
         <div class="music-info">
-            <span class="track-title" id="trackTitle">Garden Chill Beats</span>
+            <span class="track-title" id="trackTitle">Cave Forge Ambience</span>
             <input type="range" id="volumeSlider" min="0" max="1" step="0.05" value="0.3" oninput="changeVolume(this.value)">
         </div>
         <audio id="bgmAudio" loop src="assets/music.mp3"></audio>
@@ -81,8 +81,8 @@
         <div class="drawer-content-wrapper">
             <div class="drawer-header">
                 <div class="drawer-brand">
-                    <span class="drawer-logo-glow">🌱</span>
-                    <h2>GARDEN HUB</h2>
+                    <span class="drawer-logo-glow">⛏️</span>
+                    <h2>GARDEN MANIAC</h2>
                 </div>
                 <button class="close-drawer-btn" onclick="toggleMenuDrawer()" title="Close Menu">
                     <i data-lucide="x"></i>
@@ -112,7 +112,7 @@
             </div>
 
             <div class="drawer-footer">
-                <p>Catch a plant © 2026</p>
+                <p>Garden Maniac © 2026</p>
             </div>
         </div>
     </div>
@@ -133,9 +133,9 @@
                     <div class="gag-card-hero">
                         <div class="hero-logo-container">
                             <div class="logo-ambient-glow"></div>
-                            <img src="assets/logo.png" alt="Catch a plant Logo" class="gag-hero-logo" id="mainGameLogo" onerror="this.src='GameLogo.png';">
+                            <img src="assets/logo.png" alt="Garden Maniac Logo" class="gag-hero-logo" id="mainGameLogo" onerror="this.src='GameLogo.png';">
                         </div>
-                        <h1 class="gag-title">Catch a plant</h1>
+                        <h1 class="gag-title">Garden Maniac</h1>
                     </div>
 
                     <div class="gag-status-text">RELEASE SOON</div>
@@ -171,8 +171,8 @@
                 </button>
                 <div>
                     <span class="breadcrumb">Home / Announcements</span>
-                    <h2 class="news-title">📰 Catch a plant News</h2>
-                    <p class="news-subtitle">Update log and official releases for <strong>Catch a plant</strong>.</p>
+                    <h2 class="news-title">📰 Garden Maniac News</h2>
+                    <p class="news-subtitle">Update log and official releases for <strong>Garden Maniac</strong>.</p>
                 </div>
             </div>
 
@@ -263,8 +263,8 @@
                     <div class="theme-customizer-box">
                         <h4>🎨 Choose Visual Theme</h4>
                         <div class="theme-picker-grid">
-                            <button class="theme-option-btn theme-dark-picker" onclick="setHubTheme('theme-dark-energized')">
-                                <span class="theme-dot"></span> Saturated Dark
+                            <button class="theme-option-btn theme-dark-picker" onclick="setHubTheme('theme-cave-forge')">
+                                <span class="theme-dot"></span> Cave Forge
                             </button>
                             <button class="theme-option-btn theme-light-picker" onclick="setHubTheme('theme-light-energized')">
                                 <span class="theme-dot"></span> Friendly Light
